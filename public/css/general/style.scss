@@ -1,0 +1,68 @@
+@import "../import/fonts";
+@import "../import/colors";
+@import "../import/mixins";
+
+body {
+  background: $Black;
+}
+
+.body__modal-open{
+  overflow: hidden;
+}
+
+.section {
+  &__title {
+    @extend %font24px;
+    @extend %fontShadow;
+    max-width: 1200px;
+    padding: 50px 36px;
+    margin: 0 auto;
+
+    @include mobile-l {
+      font-size: 32px !important;
+      font-weight: 600 !important;
+    }
+
+    @include tablet {
+      font-size: 64px !important;
+      padding: 100px 36px;
+    }
+  }
+
+  &__content {
+    max-width: 1200px;
+    padding: 0 36px 50px;
+    margin: 0 auto;
+
+    @include tablet {
+      padding: 0 36px 100px;
+    }
+  }
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    @extend %font16px;
+    cursor: pointer !important;
+
+    @include mobile-l {
+      font-size: 24px !important;
+    }
+  }
+}

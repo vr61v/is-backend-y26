@@ -1,0 +1,67 @@
+@import "../import/colors";
+@import "../import/fonts";
+@import "../import/mixins";
+@import "../general/style";
+
+.prices {
+  background: url('../../source/background/prices.jpg') no-repeat center / cover;
+
+  &__content {
+    @extend .section__content;
+  }
+
+  &__buttons {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "calculate-button calculate-button"
+      "rules-button sales-button";
+    gap: 10px;
+
+    @include mobile-l {
+      margin-top: 50px;
+    }
+
+    @include tablet {
+      max-width: 400px;
+    }
+
+    button, a {
+      @extend %font16px;
+      @extend %fontShadow;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 100%;
+      border: none;
+      border-radius: 30px;
+      background: rgba($Black, 0.2);
+      backdrop-filter: blur(5px);
+      transition: background 0.3s;
+
+      @include mobile-l {
+        font-size: 24px !important;
+        height: 60px;
+      }
+
+      &:hover {
+        background: rgba($GrayLight, 0.1);
+      }
+    }
+  }
+
+  &__calculate-button {
+    grid-area: calculate-button;
+  }
+
+  &__rules-button {
+    grid-area: rules-button;
+  }
+
+  &__sales-button {
+    grid-area: sales-button;
+  }
+}

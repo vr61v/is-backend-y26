@@ -1,0 +1,29 @@
+<section class="prices" id="prices">
+    <h2 class="section__title">Наши услуги</h2>
+
+    <div class="prices__content">
+        <div class="items__table">
+            {{#each servicesData}}
+                <div class="item item__content">
+                    <p class="item__price">
+                        {{#if this.isRent}}
+                            {{this.price}} ₽/час
+                        {{else}}
+                            от {{this.price}} ₽
+                        {{/if}}
+                    </p>
+                    <p class="item__description">{{this.name}}</p>
+                </div>
+            {{/each}}
+        </div>
+
+        <div class="prices__buttons">
+            <button class="prices__calculate-button" id="calculatorOpenButton">Рассчитать стоимость</button>
+            <button class="prices__rules-button" id="rulesOpenButton">Правила</button>
+            <a class="prices__sales-button" href="https://vk.com/localstarstu" target="_blank">Акции</a>
+        </div>
+    </div>
+
+    {{> calculator}}
+    {{> rules}}
+</section>

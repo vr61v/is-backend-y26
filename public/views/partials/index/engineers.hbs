@@ -1,0 +1,26 @@
+<section class="engineers" id="engineers">
+    <h2 class="section__title">ЗВУКОРЕЖИССЁРЫ</h2>
+
+    <div class="engineers__content">
+        {{#each engineersData.engineers}}
+            <div class="engineers__item">
+                <div class="engineers__item-image">
+                    <img src="{{this.image}}" alt="{{this.name}}" loading="lazy">
+                </div>
+                <div class="engineers__item-description">
+                    <p class="engineers__item-name">{{this.name}}</p>
+                    <ul class="engineers__item-links">
+                        {{#each this.contacts}}
+                            <li>
+                                <a class="contact-link" href="{{this.url}}" target="_blank">
+                                    <div class="contact-link__icon"><img src="{{this.icon}}" alt="{{this.platform}} icon" loading="lazy"></div>
+                                    <p class="contact-link__text">{{this.name}}</p>
+                                </a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</section>

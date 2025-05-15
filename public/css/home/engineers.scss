@@ -1,0 +1,90 @@
+@import "../import/colors";
+@import "../import/fonts";
+@import "../import/mixins";
+@import "../general/style";
+
+.engineers {
+  background: url('../../source/background/engineers.jpg') no-repeat center / cover;
+
+  &__content {
+    @extend .section__content;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    padding: 10px;
+    border-radius: 50px;
+    background: rgba($GrayLight, 0.1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include mobile-l {
+      padding: 30px;
+    }
+
+    @include screen-laptop-l {
+      flex-direction: row;
+    }
+
+    &-image {
+      img {
+        border-radius: 40px;
+        max-width: 225px;
+        display: block;
+      }
+    }
+
+    &-description {
+      @extend %fontShadow;
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-top: 20px;
+
+      @include screen-laptop-l {
+        text-align: left;
+        padding: 0 0 0 20px;
+      }
+    }
+
+    &-name {
+      @extend %font24px;
+      padding-bottom: 30px;
+
+      @include mobile-l {
+        font-size: 32px !important;
+        font-weight: 600 !important;
+      }
+    }
+
+    &-links {
+      @extend %font16px;
+      display: flex;
+      flex-direction: column;
+
+      @include mobile-l {
+        font-size: 24px !important;
+      }
+
+      li {
+        padding-bottom: 20px;
+        a {
+          display: flex;
+          align-items: center;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}

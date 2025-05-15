@@ -1,0 +1,35 @@
+@import "import/colors";
+@import "import/fonts";
+@import "import/mixins";
+@import "general/style";
+
+footer {
+  background: $White;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet {
+    height: 50px;
+  }
+}
+
+.footer {
+  &__content {
+    @extend .section__content;
+    @extend %font12px;
+    padding-bottom: 0;
+  }
+
+  &__logo {
+    img {
+      height: 20px;
+      object-fit: cover;
+
+      @include tablet {
+        height: 40px;
+      }
+    }
+  }
+}

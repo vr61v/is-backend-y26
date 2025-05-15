@@ -1,0 +1,78 @@
+@import "../import/colors";
+@import "../import/fonts";
+@import "../import/mixins";
+
+.modal-window {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  transition: transform 0.3s, opacity 0.3s;
+
+  &__open {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &__content {
+    border-radius: 30px;
+    max-width: 75%;
+    margin: 65px auto;
+    padding: 25px;
+    background-color: rgba($color: $Black, $alpha: 0.2);
+
+    @include mobile-l {
+      padding: 50px;
+    }
+
+    @include tablet {
+      padding: 100px;
+    }
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+
+    @include mobile-l {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__title{
+    @extend %font24px;
+    @extend %fontShadow;
+
+    @include mobile-l {
+      font-size: 32px !important;
+      font-weight: 600 !important;
+    }
+
+    @include screen-laptop {
+      font-size: 52px !important;
+    }
+  }
+
+  &__close {
+    color: $White;
+    font-size: 32px;
+    font-weight: bold;
+    transition: color 0.3s;
+
+    &:hover, &:focus {
+      color: $GrayLight;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "../import/colors";
+@import "../import/fonts";
+@import "../import/mixins";
+
+.account-data {
+  @extend %font24px;
+  p {
+    margin-bottom: 15px;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

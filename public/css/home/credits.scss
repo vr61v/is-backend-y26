@@ -1,0 +1,21 @@
+@import "../import/colors";
+@import "../import/fonts";
+@import "../import/mixins";
+@import "../general/style";
+
+.credits {
+  background: url('../../source/background/credits.jpg') no-repeat center / cover;
+
+  &__content {
+    @extend .section__content;
+  }
+}
+
+.card__image-credits {
+  padding: 25px 0 25px;
+
+  img {
+    border-radius: 30%;
+    width: 290px;
+  }
+}

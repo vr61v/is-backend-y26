@@ -1,0 +1,24 @@
+<section class="contacts" id="contacts">
+    <h2 class="section__title">{{contactsData.sectionTitle}}</h2>
+    <div class="contacts__content">
+        <div class="contacts__links">
+            <ul>
+                {{#each contactsData.contacts}}
+                    <li>
+                        <a class="contact-link" href="{{this.url}}" target="_blank">
+                            <div class="contact-link__icon">
+                                <img src="{{this.icon}}" alt="{{this.iconAlt}}" loading="lazy">
+                            </div>
+                            <p class="contact-link__text">{{this.text}}</p>
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="contacts__map" style="position:relative;overflow:hidden;">
+            <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_@{/source=maps" style="color:#eee;font-size:12px;position:absolute;top:0;">Санкт‑Петербург</a>
+            <a href="https://yandex.ru/maps/2/saint-petersburg/house/14_ya_liniya_vasilyevskogo_ostrova_9/Z0kYdABkS0IBQFtjfXVydHliZQ==/?ll=30.274233%2C59.935460&utm_medium=mapframe&utm_@{/source=maps&z=18.59" style="color:#eee;font-size:12px;position:absolute;top:14px;">14-я линия Васильевского острова, 9 — Яндекс Карты</a>
+            <iframe src="https://yandex.ru/map-widget/v1/?ll=30.274233%2C59.935460&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQxNzEzOBJq0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTQt0Y8g0LvQuNC90LjRjyDQktCw0YHQuNC70YzQtdCy0YHQutC-0LPQviDQvtGB0YLRgNC-0LLQsCwgOSIKDbkx8kEV971vQg%2C%2C&z=18.59" class="maps" allowfullscreen="allowfullscreen" style="position:relative;"></iframe>
+        </div>
+    </div>
+</section>

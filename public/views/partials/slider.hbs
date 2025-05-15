@@ -1,0 +1,23 @@
+<div class="{{containerClass}}">
+    <div class="cards-slider">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {{#each slides}}
+                    <div class="swiper-slide card card__content">
+                        <div class="card__image {{this.imageClass}}">
+                            <img src="{{this.image}}" alt="{{this.alt}}" loading="lazy">
+                        </div>
+                        <p class="card__description">{{this.description}}</p>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="cards-slider__control cards-slider__control--left swiper-button-prev">
+            <img src="/source/icon/arrow-left.svg" alt="" loading="lazy">
+        </div>
+        <div class="cards-slider__control cards-slider__control--right swiper-button-next">
+            <img src="/source/icon/arrow-right.svg" alt="" loading="lazy">
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>

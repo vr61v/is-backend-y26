@@ -1,0 +1,30 @@
+<section class="account__section" id="order-create">
+    <form class="order__form" id="order-form">
+        <ul>
+            <li>
+                <label for="hours">Часы работы студии:</label>
+                <input class="calculator__hours" type="number" min="0" step="1" id="hours" />
+            </li>
+
+            {{#each servicesData}}
+                <li>
+                    <input
+                            class="{{#if isRent}}form-radio{{else}}form-checkbox{{/if}}"
+                            type="{{#if isRent}}radio{{else}}checkbox{{/if}}"
+                            id="{{nameValue}}"
+                            name="{{#if isRent}}rent{{else}}{{nameValue}}{{/if}}"
+                            value="{{nameValue}}"
+                    />
+                    <label for="{{nameValue}}">{{name}}</label>
+                </li>
+            {{/each}}
+        </ul>
+
+        <div class="form-result">
+            <div class="form-result__content" id="result"></div>
+            <div class="form-result__sum" id="sum">Итого: 0 руб.</div>
+        </div>
+
+        <button type="submit" class="order__submit">Создать заказ</button>
+    </form>
+</section>

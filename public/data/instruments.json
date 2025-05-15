@@ -1,0 +1,44 @@
+{
+  "instruments": [
+    {
+      "image": "/source/instruments/iMac.png",
+      "alt": "iMac 27', Retina 5K, (3.4Ghz Intel Core i5, 40GB RAM)",
+      "description": "iMac 27', Retina 5K, (3.4Ghz Intel Core i5, 40GB RAM)"
+    },
+    {
+      "image": "/source/instruments/Universal.png",
+      "alt": "Universal Audio Apollo Twin X QUAD",
+      "description": "Universal Audio Apollo Twin X QUAD"
+    },
+    {
+      "image": "/source/instruments/Neumann.png",
+      "alt": "Neumann TLM 103",
+      "description": "Neumann TLM 103"
+    },
+    {
+      "image": "/source/instruments/Adam.png",
+      "alt": "Adam t5v",
+      "description": "Adam t5v"
+    },
+    {
+      "image": "/source/instruments/Genelec.png",
+      "alt": "Genelec 8010",
+      "description": "Genelec 8010"
+    },
+    {
+      "image": "/source/instruments/Behringer.png",
+      "alt": "Behringer HA400",
+      "description": "Behringer HA400"
+    },
+    {
+      "image": "/source/instruments/Beyerdynamic770.png",
+      "alt": "Beyerdynamic DT 770 Pro",
+      "description": "Beyerdynamic DT 770 Pro"
+    },
+    {
+      "image": "/source/instruments/Beyerdynamic990.png",
+      "alt": "Beyerdynamic DT 990 Pro",
+      "description": "Beyerdynamic DT 990 Pro"
+    }
+  ]
+}

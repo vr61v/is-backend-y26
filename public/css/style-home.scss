@@ -1,0 +1,32 @@
+@import "import/reset", "import/font/stylesheet.css", "import/fonts";
+
+@import "general/style";
+@import "general/items-table";
+@import "general/modal-window";
+@import "general/swiper-slider";
+
+@import "general/form-result";
+@import "general/form-checkbox";
+@import "general/form-radio";
+
+@import "header";
+
+@import "home/about";
+
+@import "home/instruments";
+
+@import "home/prices";
+@import "home/rules";
+@import "import/calculator";
+
+@import "home/credits";
+
+@import "home/engineers";
+
+@import "home/contacts";
+
+@import "authentication/authentication";
+
+@import "import/event";
+
+@import "footer";

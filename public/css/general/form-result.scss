@@ -1,0 +1,69 @@
+@import "../import/colors";
+@import "../import/fonts";
+@import "../import/mixins";
+
+.form-result{
+  grid-area: result;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgba($color: $White, $alpha: 1);
+
+  @include mobile-l {
+    border-radius: 30px;
+  }
+
+  @include screen-laptop {
+    padding: 40px;
+  }
+
+  &__item {
+    @extend %font12px;
+    color: $GrayDark !important;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, $GrayLight, transparent);
+    }
+
+    @include mobile-l {
+      font-size: 16px !important;
+    }
+
+    @include screen-laptop {
+      font-size: 18px !important;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-work {
+      padding-right: 10px;
+    }
+
+    &-price {}
+  }
+
+  &__sum {
+    @extend %font16px;
+    color: $GrayDark !important;
+    padding-top: 20px;
+
+    @include screen-laptop {
+      font-size: 24px !important;
+    }
+  }
+}

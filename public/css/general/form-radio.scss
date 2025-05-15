@@ -1,0 +1,54 @@
+@import "../import/colors";
+@import "../import/fonts";
+@import "../import/mixins";
+
+.form-radio {
+  display: none;
+
+  &+ label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  &+ label::before {
+    content: '';
+    margin-right: 5px;
+    min-width: 10px;
+    min-height: 10px;
+    border: 2px solid $White;
+    border-radius: 50%;
+    transition: border-color 0.3s;
+
+    @include mobile-l {
+      min-width: 15px;
+      min-height: 15px;
+    }
+
+    @include screen-laptop {
+      min-width: 25px;
+      min-height: 25px;
+    }
+  }
+
+  &:checked + label::before {
+    border-color: $White;
+    background-image: url('../../source/icon/ok-radio.png');
+    background-repeat: no-repeat;
+    background-size: 7px;
+    background-position: center;
+
+    @include mobile-l {
+      background-size: 10px;
+    }
+
+    @include screen-laptop {
+      background-size: 17px;
+    }
+  }
+
+  &:hover + label:hover::before {
+    border-color: $GrayLight;
+    transition: border-color 0.3s;
+  }
+}

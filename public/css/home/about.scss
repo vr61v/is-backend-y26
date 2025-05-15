@@ -1,0 +1,116 @@
+@import "../import/colors";
+@import "../import/fonts";
+@import "../import/mixins";
+@import "../general/style";
+
+.about {
+  min-height: 100vh;
+  background: url('../../source/background/about.jpg') no-repeat center / cover;
+
+  &__content {
+    @extend .section__content;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+    &-text {
+      @extend %font64px;
+      @extend %fontShadowTitle;
+      text-align: center;
+
+      @include tablet {
+        font-size: 126px !important;
+      }
+    }
+
+    &-location {
+      @extend %font16px;
+      @extend %fontShadow;
+
+      @include tablet {
+        font-size: 32px !important;
+      }
+    }
+  }
+
+  &__main {
+    padding-top: 100px;
+    display: grid;
+    grid-template-areas:
+      "main-title main-title"
+      "main-text image-vertical"
+      "image-horizontal image-horizontal";
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+    grid-auto-flow: dense;
+    gap: 10px;
+
+    @include mobile-l {
+      grid-template-areas:
+      "main-title image-vertical"
+      "main-text image-vertical"
+      "image-horizontal image-vertical";
+    }
+
+
+    &-title {
+      @extend %font24px;
+      @extend %fontShadow;
+      grid-area: main-title;
+
+      @include mobile-l {
+        font-size: 32px !important;
+        font-weight: 600 !important;
+      }
+
+      @include tablet {
+        font-size: 64px !important;
+      }
+    }
+
+    &-text {
+      @extend %font16px;
+      @extend %fontShadow;
+      grid-area: main-text;
+
+      @include tablet {
+        font-size: 24px !important;
+      }
+
+      @include screen-laptop {
+        font-size: 32px !important;
+      }
+    }
+
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-image-vertical{
+      grid-area: image-vertical;
+      overflow: hidden;
+      border-radius: 20px;
+
+      @include tablet {
+        border-radius: 40px 80px 80px 40px;
+      }
+    }
+
+    &-image-horizontal {
+      grid-area: image-horizontal;
+      overflow: hidden;
+      border-radius: 20px;
+
+      @include tablet {
+        border-radius: 80px 40px 40px 80px;
+      }
+    }
+  }
+}

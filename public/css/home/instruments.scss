@@ -1,0 +1,12 @@
+@import "../import/colors";
+@import "../import/fonts";
+@import "../import/mixins";
+@import "../general/style";
+
+.instruments {
+  background: url('../../source/background/instruments.jpg') no-repeat center / cover;
+
+  &__content {
+    @extend .section__content;
+  }
+}

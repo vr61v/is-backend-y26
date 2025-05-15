@@ -1,0 +1,90 @@
+@import "colors";
+@import "fonts";
+@import "mixins";
+
+.order {
+  &__form {
+    display: grid;
+    grid-template-areas: "form form" "result result" "submit submit";
+
+    ul {
+      @extend %font16px;
+      color: $White;
+      grid-area: form;
+
+      @include screen-laptop {
+        font-size: 18px !important;
+      }
+
+      @include screen-laptop {
+        font-size: 24px !important;
+      }
+
+      li {
+        margin-bottom: 20px;
+      }
+      li:last-child {
+        @include mobile-l {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__hours {
+    width: 40px;
+    height: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: $Black;
+    background-color: $White;
+
+    @include screen-laptop {
+      width: 80px;
+      height: 20px;
+    }
+  }
+
+  &__calendar {
+    height: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: $Black;
+    background-color: $White;
+    margin-top: 10px;
+
+    @include mobile-m {
+      margin-top: 0;
+    }
+
+    @include screen-laptop {
+      height: 20px;
+    }
+  }
+
+  &__submit {
+    @extend %font16px;
+    @extend %fontShadow;
+
+    grid-area: submit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 30px;
+    background: none;
+    margin-top: 25px;
+    transition: background 0.3s;
+
+    @include mobile-l {
+      font-size: 24px !important;
+      height: 60px;
+    }
+
+    &:hover {
+      background: rgba($GrayLight, 0.1);
+    }
+  }
+}

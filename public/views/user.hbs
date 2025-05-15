@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> meta}}
+    {{> globaljs}}
+    {{> userjs}}
+    <link rel="stylesheet" href="/css/style-account.css">
+    <script src="/js/calculator.js"></script>
+</head>
+<body>
+
+{{> header}}
+
+<section class="account">
+    <div class="account__content">
+        <nav class="account-nav">
+            <ul>
+                <li><a class="account-nav__link account-nav__link--active" href="#account-data">Личные данные</a></li>
+                <li><a class="account-nav__link" href="#order-create">Создать заказ</a></li>
+                <li><a class="account-nav__link" href="#order-history">История заказов</a></li>
+                <li><a class="account-nav__link" href="#order-audio">Файлы заказов</a></li>
+            </ul>
+        </nav>
+
+        <div class="account__sections">
+            {{> account-data}}
+
+            {{> order-create}}
+
+            {{> order-history}}
+
+            {{> order-audio}}
+        </div>
+    </div>
+</section>
+
+{{> footer}}
+
+<div class="loading-screen" id="loading-screen">
+    <div class="loading-screen__spinner"></div>
+</div>
+
+</body>
+</html>

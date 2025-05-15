@@ -1,0 +1,53 @@
+@import "colors";
+@import "fonts";
+@import "mixins";
+
+.calculator {
+  &__form {
+    display: grid;
+    grid-template-areas: "form" "result";
+
+    @include tablet {
+      grid-template-areas: "form result";
+    }
+
+    ul {
+      @extend %font16px;
+      @extend %fontShadow;
+      grid-area: form;
+
+      @include screen-laptop {
+        font-size: 18px !important;
+      }
+
+      @include screen-laptop {
+        font-size: 24px !important;
+      }
+
+      li {
+        margin-bottom: 20px;
+      }
+
+      li:last-child {
+        @include mobile-l {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__hours {
+    width: 40px;
+    height: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: $Black;
+    background-color: $White;
+
+    @include screen-laptop {
+      width: 80px;
+      height: 20px;
+    }
+  }
+}

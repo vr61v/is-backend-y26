@@ -1,0 +1,96 @@
+@import "../import/colors";
+@import "../import/fonts";
+@import "../import/mixins";
+@import "../general/style";
+
+.authentication {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url('../../source/background/signin-singup.jpg') no-repeat center / cover;
+
+  &__title {
+    margin-top: 64.5px;
+    font-size: 48px !important;
+    font-weight: 600 !important;
+
+    @include tablet {
+      font-size: 64px !important;
+    }
+  }
+
+  &__content {
+    @extend .section__content;
+    padding: 0 25px 50px;
+  }
+
+  &__form {
+    ul{
+      @extend %font24px;
+      @extend %fontShadow;
+
+      border-radius: 30px;
+      background: rgba($GrayLight, 0.1);
+      backdrop-filter: blur(5px);
+      padding: 25px;
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      p {
+        @extend %font16px;
+      }
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    input {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      color: $Black;
+      background-color: $White;
+      margin-top: 10px;
+      max-width: 200px;
+      @include mobile-l {
+        max-width: 100%;
+      }
+    }
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: $White;
+
+    height: 40px;
+    width: 100%;
+    margin-top: 25px;
+
+    border: none;
+    border-radius: 30px;
+    background: rgba($GrayLight, 0.1);
+    backdrop-filter: blur(5px);
+    transition: background 0.3s;
+
+    @include mobile-l {
+      font-size: 24px !important;
+      height: 60px;
+    }
+
+    &:hover {
+      background: rgba($GrayDark, 0.1);
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import "colors";
+
+%font124px{
+  font-size: 124px;
+  font-family: Helvetica, serif;
+  font-weight: 700;
+  color: $White;
+  cursor: default;
+}
+
+%font64px{
+  font-size: 64px;
+  font-family: Helvetica, serif;
+  font-weight: 600;
+  color: $White;
+  cursor: default;
+}
+
+%font52px{
+  font-size: 64px;
+  font-family: Helvetica, serif;
+  font-weight: 600;
+  color: $White;
+  cursor: default;
+}
+
+%font32px{
+  font-size: 32px;
+  font-family: Helvetica, serif;
+  font-weight: 600;
+  color: $White;
+  cursor: default;
+}
+
+%font24px{
+  font-size: 24px;
+  font-family: Helvetica, serif;
+  font-weight: 500;
+  color: $White;
+  cursor: default;
+}
+
+%font16px{
+  font-size: 16px;
+  font-family: Helvetica, serif;
+  font-weight: 500;
+  color: $White;
+  cursor: default;
+}
+
+%font12px{
+  font-size: 12px;
+  font-family: Helvetica, serif;
+  font-weight: 500;
+  color: $White;
+  cursor: default;
+}
+
+%fontShadowTitle{
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.65);
+}
+
+%fontShadow{
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
+}

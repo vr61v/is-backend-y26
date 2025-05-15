@@ -1,0 +1,52 @@
+{
+  "credits": [
+    {
+      "imageClass": "card__image-credits",
+      "image": "/source/credits/FRIENDLY%20THUG%20%2052%20NGG.jpg",
+      "alt": "FRIENDLY THUG  52 NGG",
+      "description": "FRIENDLY THUG  52 NGG"
+    },
+    {
+      "imageClass": "card__image-credits",
+      "image": "/source/credits/ALBLAK%2052.jpg",
+      "alt": "ALBLAK 52",
+      "description": "ALBLAK 52"
+    },
+    {
+      "imageClass": "card__image-credits",
+      "image": "/source/credits/MOSQUIT.jpg",
+      "alt": "MOSQUIT",
+      "description": "MOSQUIT"
+    },
+    {
+      "imageClass": "card__image-credits",
+      "image": "/source/credits/Glocki52.jpg",
+      "alt": "Glocki52",
+      "description": "Glocki52"
+    },
+    {
+      "imageClass": "card__image-credits",
+      "image": "/source/credits/SaintPrince%2052.jpg",
+      "alt": "SaintPrince 52",
+      "description": "SaintPrince 52"
+    },
+    {
+      "imageClass": "card__image-credits",
+      "image": "/source/credits/MyDee%2052.jpg",
+      "alt": "MyDee 52",
+      "description": "MyDee 52"
+    },
+    {
+      "imageClass": "card__image-credits",
+      "image": "/source/credits/CRICKET.jpg",
+      "alt": "CRICKET",
+      "description": "CRICKET"
+    },
+    {
+      "imageClass": "card__image-credits",
+      "image": "/source/credits/dofamine%20h4ze.jpg",
+      "alt": "dofamine h4ze",
+      "description": "dofamine h4ze"
+    }
+  ]
+}

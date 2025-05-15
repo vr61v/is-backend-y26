@@ -1,0 +1,29 @@
+{
+  "sectionTitle": "КОНТАКТЫ",
+  "contacts": [
+    {
+      "url": "https://vk.com/localstarstu",
+      "icon": "/source/icon/vk.png",
+      "iconAlt": "vk icon",
+      "text": "vk.com/localstarstu"
+    },
+    {
+      "url": "https://t.me/localstarstu",
+      "icon": "/source/icon/tg.png",
+      "iconAlt": "telegram icon",
+      "text": "t.me/localstarstu"
+    },
+    {
+      "url": "tel:+79313148151",
+      "icon": "/source/icon/phone.png",
+      "iconAlt": "phone icon",
+      "text": "+7-931-314-81-51"
+    },
+    {
+      "url": "https://yandex.ru/maps/-/CDDRBE9U",
+      "icon": "/source/icon/map.png",
+      "iconAlt": "map icon",
+      "text": "СПБ 14-линия В.О д. 9"
+    }
+  ]
+}

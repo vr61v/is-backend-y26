@@ -1,0 +1,43 @@
+@import "breakpoints";
+
+@mixin mobile-s {
+  @media (min-width: #{$screen-mobile-s}) {
+    @content;
+  }
+}
+
+@mixin mobile-m {
+  @media (min-width: #{$screen-mobile-m}) {
+    @content;
+  }
+}
+
+@mixin mobile-l {
+  @media (min-width: #{$screen-mobile-l}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$screen-tablet}) {
+    @content;
+  }
+}
+
+@mixin screen-laptop {
+  @media (min-width: #{$screen-laptop}) {
+    @content;
+  }
+}
+
+@mixin screen-laptop-l {
+  @media (min-width: #{$screen-laptop-l}) {
+    @content;
+  }
+}
+
+@mixin rwd($screen) {
+  @media (min-width: $screen+'px') {
+    @content;
+  }
+}

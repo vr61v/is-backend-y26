@@ -1,0 +1,76 @@
+{
+  "engineers": [
+    {
+      "image": "/source/engineers/CRICKET.jpg",
+      "name": "CRICKET",
+      "contacts": [
+        {
+          "platform": "vk",
+          "url": "https://vk.com/cricket1cricket",
+          "icon": "/source/icon/vk.png",
+          "name": "cricket1cricket"
+        },
+        {
+          "platform": "telegram",
+          "url": "https://t.me/cricket1cricket1",
+          "icon": "/source/icon/tg.png",
+          "name": "cricket1cricket1"
+        },
+        {
+          "platform": "gmail",
+          "url": "mailto:1cricketcricket@gmail.com",
+          "icon": "/source/icon/gmail.png",
+          "name": "1cricketcricket"
+        }
+      ]
+    },
+    {
+      "image": "/source/engineers/dofamine%20h4ze.jpg",
+      "name": "dofamine h4ze",
+      "contacts": [
+        {
+          "platform": "vk",
+          "url": "https://vk.com/dofamineh4ze",
+          "icon": "/source/icon/vk.png",
+          "name": "dofamineh4ze"
+        },
+        {
+          "platform": "telegram",
+          "url": "https://t.me/smookasac",
+          "icon": "/source/icon/tg.png",
+          "name": "smookasac"
+        },
+        {
+          "platform": "gmail",
+          "url": "mailto:1dofamineh4ze@gmail.com",
+          "icon": "/source/icon/gmail.png",
+          "name": "1dofamineh4ze"
+        }
+      ]
+    },
+    {
+      "image": "/source/engineers/Nikki%20Buzzy.jpg",
+      "name": "Nikki Buzzy",
+      "contacts": [
+        {
+          "platform": "vk",
+          "url": "https://vk.com/nikkibuzzy",
+          "icon": "/source/icon/vk.png",
+          "name": "nikkibuzzy"
+        },
+        {
+          "platform": "phone",
+          "url": "tel:+79217517299",
+          "icon": "/source/icon/phone.png",
+          "name": "+7-921-751-72-99"
+        },
+        {
+          "platform": "gmail",
+          "url": "mailto:easybreezymusic@gmail.com",
+          "icon": "/source/icon/gmail.png",
+          "name": "easybreezymusic"
+        }
+      ]
+    }
+  ]
+}

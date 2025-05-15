@@ -1,0 +1,76 @@
+@import "../import/colors";
+@import "../import/fonts";
+@import "../import/mixins";
+
+.items__table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+.item {
+  border-radius: 20px;
+  background-color: rgba($Black, 0.2);
+  backdrop-filter: blur(5px);
+  transition: background 0.3s;
+
+  @include screen-laptop {
+    border-radius: 40px;
+  }
+
+  &__content {
+    display: flex;
+    aspect-ratio: 1 / 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  &__price {
+    @extend %font16px;
+    @extend %fontShadow;
+    padding-bottom: 30px;
+
+    @include mobile-l {
+      font-size: 24px !important;
+      font-weight: 600 !important;
+    }
+
+    @include rwd(500) {
+      font-size: 32px !important;
+    }
+
+    @include screen-laptop {
+      font-size: 52px !important;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__description {
+    @extend %font12px;
+    @extend %fontShadow;
+
+    @include mobile-m {
+      font-size: 16px !important;
+    }
+
+    @include mobile-l {
+      font-size: 24px !important;
+    }
+
+    @include screen-laptop {
+      font-size: 32px !important;
+      font-weight: 600 !important;
+    }
+  }
+
+  &:hover {
+    background-color: rgba($GrayLight, 0.1);
+  }
+}

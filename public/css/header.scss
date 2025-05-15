@@ -1,0 +1,155 @@
+@import "import/colors";
+@import "import/fonts";
+@import "import/mixins";
+
+header {
+  @extend %font16px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.header {
+  &__content {
+    max-width: 1200px;
+    padding: 0 36px 0;
+    margin: 0 auto;
+
+    border-radius: 0 0 10px 10px;
+    background-color: rgba($GrayDark, 0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  &__navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin: 10px;
+    position: fixed;
+    top: 65px;
+    left: -100%;
+    border-radius: 15px;
+    background-color: rgba($GrayDark, 0.1);
+    backdrop-filter: blur(10px);
+    transition: left 0.6s ease;
+
+    @include tablet {
+      position: static;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      padding: 20px;
+      margin: 0;
+      background-color: transparent;
+      backdrop-filter: none;
+    }
+
+    &--open {
+      left: 0;
+    }
+  }
+
+  &__link {
+    position: relative;
+    font-size: 24px;
+    transition: font-size 0.3s ease, background 0.3s ease, margin 0.3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 0;
+      background: linear-gradient(to right, $White, transparent);
+      transition: width 0.3s ease;
+
+      @include tablet {
+        background: $White;
+      }
+    }
+
+    @include tablet {
+      font-size: 16px;
+      margin-right: 10px;
+    }
+  }
+
+  &__link--active {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 10px 0 10px 0;
+
+    &::after {
+      width: 100%;
+    }
+
+    @include tablet {
+      font-size: 18px;
+      margin: 0 10px 0 0;
+    }
+  }
+
+  &__burger {
+    display: flex;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-self: start;
+
+    @include tablet {
+      display: none;
+    }
+
+    &__line {
+      width: 27px;
+      height: 3px;
+      background-color: $White;
+      transition: transform 0.3s, opacity 0.3s, width 0.3s;
+    }
+
+    &--active {
+      & .header__burger__line:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+      }
+
+      & .header__burger__line:nth-child(2) {
+        width: 0;
+      }
+
+      & .header__burger__line:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
+      }
+    }
+  }
+
+  &__logo {
+    padding: 10px 0;
+    justify-self: center;
+  }
+
+  &__user-icon {
+    justify-self: end;
+    &--logged {
+      font-size: 12px !important;
+      text-align: right;
+      @include tablet {
+        font-size: 16px !important;
+      }
+    }
+  }
+}

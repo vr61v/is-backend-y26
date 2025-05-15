@@ -1,0 +1,10 @@
+{
+  "links": [
+    { "text": "LOCAL", "href": "#about" },
+    { "text": "ОБОРУДОВАНИЕ", "href": "#instruments" },
+    { "text": "ЦЕНЫ", "href": "#prices" },
+    { "text": "CREDITS", "href": "#credits" },
+    { "text": "ЗВУКОРЕЖИССЁРЫ", "href": "#engineers" },
+    { "text": "КОНТАКТЫ", "href": "#contacts" }
+  ]
+}

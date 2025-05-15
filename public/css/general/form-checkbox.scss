@@ -1,0 +1,54 @@
+@import "../import/colors";
+@import "../import/fonts";
+@import "../import/mixins";
+
+.form-checkbox {
+  display: none;
+
+  & + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  & + label::before {
+    content: '';
+    margin-right: 5px;
+    min-width: 13px;
+    min-height: 13px;
+    border: 2px solid $White;
+    border-radius: 30%;
+    transition: border-color 0.3s;
+
+    @include mobile-l {
+      min-width: 18px;
+      min-height: 18px;
+    }
+
+    @include screen-laptop {
+      min-width: 25px;
+      min-height: 25px;
+    }
+  }
+  &:checked + label::before {
+    border-color: $White;
+    background-image: url('../../source/icon/ok.png');
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center;
+
+    @include mobile-l {
+      background-size: 14px;
+    }
+
+    @include screen-laptop {
+      background-size: 20px;
+    }
+  }
+
+  &:hover + label:hover::before {
+    border-color: $GrayLight;
+    transition: border-color 0.3s;
+  }
+
+}

@@ -1,0 +1,74 @@
+@import "../import/colors";
+@import "../import/fonts";
+@import "../import/mixins";
+@import "../general/style";
+
+.account {
+  min-height: 100vh;
+  background: url('../../source/background/account.jpg') no-repeat center / cover;
+
+  &__content {
+    display: grid;
+    padding: 115px 5px 50px;
+    word-break: break-word;
+    grid-template-rows: 1fr;
+
+    @include screen-laptop {
+      max-width: 1200px;
+      padding: 165px 36px 100px;
+      margin: 0 auto;
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  &__section {
+    display: none;
+    border-radius: 30px;
+    padding: 25px;
+    background: rgba($GrayLight, 0.1);
+    backdrop-filter: blur(5px);
+
+    &--active {
+      display: block;
+    }
+
+    @include screen-laptop {
+      padding: 50px;
+    }
+  }
+}
+
+.account-nav {
+  @extend %font24px;
+  text-align: left;
+  border-radius: 30px;
+  padding: 25px;
+  margin: 0 0 25px;
+  background: rgba($GrayLight, 0.1);
+  backdrop-filter: blur(5px);
+
+  @include screen-laptop {
+    text-align: center;
+    font-size: 32px !important;
+    margin-bottom: 0;
+    margin-right: 25px;
+    padding: 50px;
+  }
+  
+  &__link {
+    color: $GrayLight;
+
+    &--active {
+      color: $White;
+    }
+  }
+
+  ul {
+    li {
+      margin-bottom: 25px;
+    }
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

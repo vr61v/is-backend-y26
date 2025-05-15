@@ -1,0 +1,26 @@
+<header>
+    <div class="header__content">
+        <nav class="header__navigation">
+            {{# if headerData }}
+                <div class="header__links" id="headerLinks">
+                    {{# if headerData.links }}
+                        {{#each headerData.links }}
+                            <a class="header__link {{#if @first}}header__link--active{{/if}}" href="{{this.href}}">{{this.text}}</a>
+                        {{/each}}
+                    {{/if}}
+                </div>
+                <div class="header__burger" id="burger" onclick="burger()" aria-label="Toggle navigation menu">
+                    <div class="header__burger__line"></div>
+                    <div class="header__burger__line"></div>
+                    <div class="header__burger__line"></div>
+                </div>
+            {{else}}
+                <div></div>
+            {{/if}}
+
+            <a class="header__logo" href="/home">
+                <img src="/source/icon/logo-header.png" alt="Логотип в заголовке" loading="lazy">
+            </a>
+        </nav>
+    </div>
+</header>

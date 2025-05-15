@@ -1,0 +1,119 @@
+@import "../import/colors";
+@import "../import/fonts";
+$border-radius: 30px;
+$transition: all 0.2s ease;
+$shadow: 0 2px 8px rgba($Black, 0.15);
+
+.orders-container {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $White;
+  border-radius: $border-radius;
+}
+
+.orders-list {
+  @extend %font16px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .empty-message {
+    text-align: center;
+    color: $Gray;
+  }
+
+  .order-item {
+    background: $White;
+    border-radius: $border-radius;
+    padding: 15px;
+    box-shadow: $shadow;
+    transition: $transition;
+
+    &:hover {
+      background: rgba($GrayLight, 0.25);
+    }
+
+    .order-header {
+      color: $GrayDark;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 5px 0;
+
+      .order-id {
+        font-weight: bold;
+        margin-right: 10px;
+      }
+
+      .order-status {
+        padding: 4px 12px;
+        border-radius: 15px;
+
+        &.pending {
+          background: rgba($StatusPending, 0.2);
+          color: darken($StatusPending, 10%);
+        }
+        &.in_execute {
+          background: rgba($StatusInExecute, 0.2);
+          color: darken($StatusInExecute, 10%);
+        }
+        &.completed {
+          background: rgba($StatusCompleted, 0.2);
+          color: darken($StatusCompleted, 10%);
+        }
+        &.cancelled {
+          background: rgba($StatusCancelled, 0.2);
+          color: darken($StatusCancelled, 10%);
+        }
+      }
+
+      .order-date {
+        flex-grow: 1;
+        text-align: right;
+        margin-right: 15px;
+      }
+
+      .toggle-details {
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: $transition;
+        transform: rotate(0deg);
+
+        &.expanded {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .order-details {
+      color: $GrayDark;
+      padding-top: 15px;
+      margin-top: 15px;
+      border-top: 1px solid rgba($GrayLight, 0.5);
+      display: none;
+
+      .services-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 15px;
+
+        .service-item {
+          display: flex;
+          justify-content: space-between;
+          padding: 5px 0;
+        }
+      }
+
+      .order-total {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        padding: 10px 0 5px;
+        border-top: 1px dashed $GrayLight;
+      }
+    }
+  }
+}

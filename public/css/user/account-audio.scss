@@ -1,0 +1,151 @@
+@import "../import/colors";
+@import "../import/fonts";
+$border-radius: 30px;
+$transition: all 0.2s ease;
+$shadow: 0 2px 8px rgba($Black, 0.15);
+
+.audio-files-container {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $White;
+  border-radius: $border-radius;
+}
+
+.audio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  @extend %font16px;
+  color: $GrayDark !important;
+
+  .audio-item {
+    background: $White;
+    border-radius: $border-radius;
+    padding: 15px;
+    box-shadow: $shadow;
+    transition: $transition;
+
+    &:hover {
+      background: rgba($GrayLight, 0.25);
+    }
+
+    .audio-info {
+      margin-bottom: 10px;
+      .audio-filename { }
+    }
+  }
+}
+
+.audio-player {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .player-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .play-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: $GrayDark;
+      color: $White;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: $transition;
+
+      &:hover {
+        background: $Gray;
+        transform: scale(1.05);
+      }
+
+      &[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed;
+        background: $Gray;
+      }
+
+      .icon {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+      }
+    }
+
+    .progress-container {
+      background: $White;
+      border: 1px solid $GrayDark;
+      border-radius: 3px;
+      flex-grow: 1;
+      height: 6px;
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover {
+        height: 8px;
+      }
+
+      .progress-bar {
+        background: $GrayDark;
+        height: 100%;
+        border-radius: 3px;
+        width: 0;
+        transition: width 0.2s;
+      }
+    }
+
+    .time-info {
+      display: flex;
+      gap: 5px;
+      min-width: 80px;
+    }
+  }
+
+  .volume-control {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+
+    .volume-icon {
+      width: 20px;
+      height: 20px;
+      fill: $GrayDark;
+      transition: $transition;
+
+      &:hover {
+        fill: $Gray;
+        transform: scale(1.05);
+      }
+    }
+
+    .volume-slider {
+      width: 100px;
+      height: 4px;
+      -webkit-appearance: none;
+      background: $GrayDark;
+      border-radius: 3px;
+      outline: none;
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover {
+        height: 6px;
+      }
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 12px;
+        height: 12px;
+        background: $White;
+        border: 2px solid $GrayDark;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+}
